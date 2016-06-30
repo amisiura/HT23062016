@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="old">
+
+</div>
+
+
+<script>
+
+    var  blockCurrent=document.getElementsByClassName('old')
+    var  blockToReplace=document.createElement('div');
+    blockToReplace.setAttribute('class','new');
+
+    console.log(blockCurrent);
+    console.log(blockToReplace);
+
+    var replaceElBy = function(blockCurrent, blockToReplace) {
+
+        document.body.replaceChild(blockToReplace,blockCurrent);
+        if (document.getElementsByClassName('new')==null)
+        {
+            alert('Не получилось')
+        }
+        else
+        {
+            alert('Замена осуществлена успешно!')
+        }
+    }
+    replaceElBy();
+
+</script>
+
+</body>
+</html>
