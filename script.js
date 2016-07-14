@@ -101,14 +101,16 @@ printNumbersInterval();
 createSpanInBlockByID('myBlock') // создаст span в блоке с id='myBlock'
 
  P.S. Эта функция должна проверять наличие элемента в этом блоке, если он уже там есть второй раз она его добавлять не будет!*/
-var createSpanInBlockByID = function (blockID) {
+var createSpanInBlockByID   = function (blockID) {
 
     if  (document.getElementById('blockID')==null) {
         document.getElementById('blockID').appendChild(document.createSpanInBlockByID('myBlock');
 
     }
 }
-createSpanInBlockByID();
+
+var checkID=prompt('Enter ID')
+createSpanInBlockByID(checkID);
 
 
 /*5 задание
@@ -129,9 +131,6 @@ var createCloneNode(block) = function (block) {
  внутри block count количество детей типа type
  ( type это будет тип блока например 'span, ul, li, div' и т.д. )*/
 
-var count=10;
-var type = 'div';
-var block = 'div';
 
 var addChildrenTo = function (block, count, type) {
 
@@ -142,7 +141,12 @@ var addChildrenTo = function (block, count, type) {
     }
 }
 
-addChildrenTo();
+var count=prompt('Enter numer of children');
+var type = prompt('Enter type of children');
+var block = prompt('Enter type of block you want to append children');
+
+
+addChildrenTo(count, type, block);
 
 /*7 задание
 
@@ -169,4 +173,8 @@ var replaceElBy = function(blockCurrent, blockToReplace) {
         alert('Замена осуществлена успешно!')
     }
 }
-replaceElBy();
+
+var blockCurrent=prompt('Enter an old block');
+var blockToReplace = prompt('Enter a new block');
+
+replaceElBy(blockCurrent, blockToReplace);
